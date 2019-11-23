@@ -1,4 +1,34 @@
 {
+    "doctrine/annotations": {
+        "version": "1.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "1.0",
+            "ref": "cb4152ebcadbe620ea2261da1a1c5a9b8cea7672"
+        },
+        "files": [
+            "config/routes/annotations.yaml"
+        ]
+    },
+    "doctrine/lexer": {
+        "version": "1.2.0"
+    },
+    "dragonmantank/cron-expression": {
+        "version": "v2.3.0"
+    },
+    "ecotone/ecotone": {
+        "version": "0.4.12"
+    },
+    "ecotone/symfony-bundle": {
+        "version": "0.4.3"
+    },
+    "ocramius/package-versions": {
+        "version": "1.5.1"
+    },
+    "ocramius/proxy-manager": {
+        "version": "2.2.3"
+    },
     "psr/cache": {
         "version": "1.0.1"
     },
@@ -8,8 +38,14 @@
     "psr/event-dispatcher": {
         "version": "1.0.0"
     },
+    "psr/http-message": {
+        "version": "1.0.1"
+    },
     "psr/log": {
         "version": "1.1.2"
+    },
+    "ramsey/uuid": {
+        "version": "3.8.0"
     },
     "symfony/cache": {
         "version": "v5.0.0"
@@ -29,14 +65,10 @@
             "ref": "59d8cc5a923274e552412fcd51e284bba02982de"
         },
         "files": [
-            "bin/console",
-            "config/bootstrap.php"
+            "bin/console"
         ]
     },
     "symfony/dependency-injection": {
-        "version": "v5.0.0"
-    },
-    "symfony/dotenv": {
         "version": "v5.0.0"
     },
     "symfony/error-handler": {
@@ -47,6 +79,9 @@
     },
     "symfony/event-dispatcher-contracts": {
         "version": "v2.0.0"
+    },
+    "symfony/expression-language": {
+        "version": "v5.0.0"
     },
     "symfony/filesystem": {
         "version": "v5.0.0"
@@ -130,5 +165,11 @@
     },
     "symfony/yaml": {
         "version": "v5.0.0"
+    },
+    "zendframework/zend-code": {
+        "version": "3.4.0"
+    },
+    "zendframework/zend-eventmanager": {
+        "version": "3.2.1"
     }
 }
