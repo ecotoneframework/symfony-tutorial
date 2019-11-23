@@ -8,7 +8,6 @@ services:
       - "$PWD:/data/app"
     user: 1000:1000
     working_dir: "/data/app"
-    entrypoint: ""
     command: sleep 999999
     networks:
       - default

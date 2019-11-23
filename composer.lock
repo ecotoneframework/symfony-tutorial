@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e3febf79eb188cad1fd6f076d90402f2",
+    "content-hash": "8950cbfffb13b8eec58db368c2b605c7",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -262,16 +262,16 @@
         },
         {
             "name": "ecotone/symfony-bundle",
-            "version": "0.4.3",
+            "version": "0.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ecotoneframework/symfony.git",
-                "reference": "ca1e00edac73c4ce893bae32f0e5c6fc131dbb08"
+                "reference": "2fd18819d4be49890e6a338b10420472826d89ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ecotoneframework/symfony/zipball/ca1e00edac73c4ce893bae32f0e5c6fc131dbb08",
-                "reference": "ca1e00edac73c4ce893bae32f0e5c6fc131dbb08",
+                "url": "https://api.github.com/repos/ecotoneframework/symfony/zipball/2fd18819d4be49890e6a338b10420472826d89ef",
+                "reference": "2fd18819d4be49890e6a338b10420472826d89ef",
                 "shasum": ""
             },
             "require": {
@@ -314,7 +314,7 @@
                 "messaging",
                 "symfony"
             ],
-            "time": "2019-11-23T14:20:01+00:00"
+            "time": "2019-11-23T14:46:16+00:00"
         },
         {
             "name": "ocramius/package-versions",
