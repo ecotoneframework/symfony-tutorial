@@ -6,8 +6,6 @@
         "ext-ctype": "*",
         "ext-iconv": "*",
         "ecotone/symfony-bundle": "^0.7",
-        "ecotone/amqp": "^0.7",
-        "ecotone/jms-converter": "^0.7",
         "phpunit/phpunit": "8.5",
         "symfony/console": "5.0.*",
         "symfony/flex": "^1.3.1",
