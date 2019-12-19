@@ -2,7 +2,7 @@ version: "3"
 
 services:
   app:
-    image: simplycodedsoftware/ci:7.3
+    image: simplycodedsoftware/ci:7.4
     volumes:
       - "$PWD:/data/app"
     user: 1000:1000
@@ -10,11 +10,15 @@ services:
     command: sleep 999999
     networks:
       - default
+    environment:
+      RABBITMQ_DSN: amqp+lib://guest:guest@rabbitmq:5672/ecotone
+      APP_ENV: "prod"
   rabbitmq:
     image: rabbitmq:3.6-management-alpine
     environment:
       RABBITMQ_DEFAULT_USER: guest
       RABBITMQ_DEFAULT_PASS: guest
+      RABBITMQ_DEFAULT_VHOST: ecotone
     ports:
       - 5672:5672
       - 15672:15672
