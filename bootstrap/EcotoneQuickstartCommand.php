@@ -26,7 +26,7 @@ class EcotoneQuickstartCommand extends Command
     {
         $output->writeln("<info>Running example...</info>");
         $this->ecotoneQuickstart->run();
-        $output->writeln("<info>Good job, scenario ran with success!</info>");
+        $output->writeln("\n<info>Good job, scenario ran with success!</info>");
 
         return 0;
     }
