@@ -24,7 +24,7 @@ class EcotoneQuickstartCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $output->writeln("<info>Running example...</info>");
+        $output->writeln("<comment>Running example...</comment>");
         $this->ecotoneQuickstart->run();
         $output->writeln("\n<info>Good job, scenario ran with success!</info>");
 
