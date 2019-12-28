@@ -5,21 +5,15 @@ namespace App;
 
 use App\Domain\Product\GetProductPriceQuery;
 use App\Domain\Product\RegisterProductCommand;
-use Ecotone\Modelling\CommandBus;
+use Ecotone\Modelling\CommandBusWithEventPublishing;
 use Ecotone\Modelling\QueryBus;
 
 class EcotoneQuickstart
 {
-    /**
-     * @var CommandBus
-     */
-    private $commandBus;
-    /**
-     * @var QueryBus
-     */
-    private $queryBus;
+    private CommandBusWithEventPublishing $commandBus;
+    private QueryBus $queryBus;
 
-    public function __construct(CommandBus $commandBus, QueryBus $queryBus)
+    public function __construct(CommandBusWithEventPublishing $commandBus, QueryBus $queryBus)
     {
         $this->commandBus = $commandBus;
         $this->queryBus = $queryBus;
