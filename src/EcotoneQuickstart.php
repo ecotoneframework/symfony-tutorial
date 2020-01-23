@@ -1,10 +1,8 @@
 <?php
 
-
 namespace App;
 
-use App\Domain\Product\GetProductPriceQuery;
-use App\Domain\Product\RegisterProductCommand;
+use Ecotone\Messaging\Conversion\MediaType;
 use Ecotone\Modelling\CommandBus;
 use Ecotone\Modelling\QueryBus;
 
@@ -21,8 +19,8 @@ class EcotoneQuickstart
 
     public function run() : void
     {
-        $this->commandBus->send(new RegisterProductCommand(1, 100));
+        $this->commandBus->convertAndSend("product.register", MediaType::APPLICATION_JSON, \json_encode(["productId" => 1, "cost" => 100]));
 
-        echo $this->queryBus->send(new GetProductPriceQuery(1));
+        echo $this->queryBus->convertAndSend("product.getCost", MediaType::APPLICATION_JSON, \json_encode(["productId" => 1]));
     }
 }
