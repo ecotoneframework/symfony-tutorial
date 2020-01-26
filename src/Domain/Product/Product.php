@@ -2,6 +2,7 @@
 
 namespace App\Domain\Product;
 
+use App\Infrastructure\AddUserId\AddUserId;
 use App\Infrastructure\RequireAdministrator\RequireAdministrator;
 use Ecotone\Modelling\Annotation\Aggregate;
 use Ecotone\Modelling\Annotation\AggregateIdentifier;
@@ -11,6 +12,7 @@ use Ecotone\Modelling\WithAggregateEvents;
 
 /**
  * @Aggregate()
+ * @AddUserId()
  */
 class Product
 {

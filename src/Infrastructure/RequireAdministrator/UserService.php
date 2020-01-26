@@ -16,7 +16,8 @@ class UserService
      *     pointcut="@(App\Infrastructure\RequireAdministrator\RequireAdministrator)",
      *     parameterConverters={
      *         @Header(parameterName="userId", headerName="userId", isRequired=false)
-     *     }
+     *     },
+     *     precedence=1
      * )
      */
     public function isAdmin(?string $userId) : void
