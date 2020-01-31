@@ -5,17 +5,16 @@ namespace App\Infrastructure\Converter;
 
 use App\Domain\Product\Cost;
 use Ecotone\Messaging\Annotation\Converter;
-use Ecotone\Messaging\Annotation\MessageEndpoint;
 
 /**
- * @MessageEndpoint()
+ * @Converter()
  */
 class CostConverter
 {
     /**
      * @Converter()
      */
-    public function convertFrom(Cost $cost) : string
+    public function convertFrom(Cost $cost): string
     {
         return $cost->getAmount();
     }
@@ -23,7 +22,7 @@ class CostConverter
     /**
      * @Converter()
      */
-    public function convertTo(int $amount) : Cost
+    public function convertTo(int $amount): Cost
     {
         return new Cost($amount);
     }
