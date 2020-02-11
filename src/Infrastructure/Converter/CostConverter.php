@@ -14,7 +14,7 @@ class CostConverter
     /**
      * @Converter()
      */
-    public function convertFrom(Cost $cost) : string
+    public function convertFrom(Cost $cost) : int
     {
         return $cost->getAmount();
     }
