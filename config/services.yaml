@@ -19,8 +19,3 @@ services:
     Bootstrap\:
         resource: '../bootstrap/*'
         exclude: '../bootstrap/{Kernel.php}'
-
-    Enqueue\AmqpLib\AmqpConnectionFactory:
-        class: Enqueue\AmqpLib\AmqpConnectionFactory
-        arguments:
-            - dsn: "%env(string:RABBITMQ_DSN)%"
