@@ -29,14 +29,41 @@
     "dragonmantank/cron-expression": {
         "version": "v2.3.0"
     },
+    "ecotone/amqp": {
+        "version": "0.9.3"
+    },
     "ecotone/ecotone": {
         "version": "0.4.12"
+    },
+    "ecotone/enqueue": {
+        "version": "0.9.5"
     },
     "ecotone/jms-converter": {
         "version": "0.8.0"
     },
     "ecotone/symfony-bundle": {
         "version": "0.4.3"
+    },
+    "enqueue/amqp-lib": {
+        "version": "0.7",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "0.7",
+            "ref": "c1cda31bd61f7454d77782bccd0a371335aa2ee6"
+        }
+    },
+    "enqueue/amqp-tools": {
+        "version": "0.10.0"
+    },
+    "enqueue/dsn": {
+        "version": "0.10.1"
+    },
+    "enqueue/enqueue": {
+        "version": "0.10.1"
+    },
+    "enqueue/null": {
+        "version": "0.10.1"
     },
     "hoa/compiler": {
         "version": "3.17.08.08"
@@ -104,6 +131,9 @@
     "php": {
         "version": "7.4"
     },
+    "php-amqplib/php-amqplib": {
+        "version": "v2.11.0"
+    },
     "phpdocumentor/reflection-common": {
         "version": "2.0.0"
     },
@@ -112,6 +142,9 @@
     },
     "phpdocumentor/type-resolver": {
         "version": "1.0.1"
+    },
+    "phpseclib/phpseclib": {
+        "version": "2.0.23"
     },
     "phpspec/prophecy": {
         "version": "1.9.0"
@@ -160,6 +193,12 @@
     },
     "psr/log": {
         "version": "1.1.2"
+    },
+    "queue-interop/amqp-interop": {
+        "version": "0.8.1"
+    },
+    "queue-interop/queue-interop": {
+        "version": "0.8.0"
     },
     "ramsey/uuid": {
         "version": "3.8.0"

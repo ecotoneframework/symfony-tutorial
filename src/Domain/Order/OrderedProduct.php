@@ -1,8 +1,6 @@
 <?php
 
-
 namespace App\Domain\Order;
-
 
 class OrderedProduct
 {
@@ -14,5 +12,10 @@ class OrderedProduct
     {
         $this->productId = $productId;
         $this->cost = $cost;
+    }
+
+    public function getCost(): int
+    {
+        return $this->cost;
     }
 }
