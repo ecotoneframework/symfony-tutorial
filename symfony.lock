@@ -110,6 +110,9 @@
     "phpspec/prophecy": {
         "version": "1.9.0"
     },
+    "phpstan/phpdoc-parser": {
+        "version": "0.4.10"
+    },
     "phpunit/php-code-coverage": {
         "version": "7.0.10"
     },

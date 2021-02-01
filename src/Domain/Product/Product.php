@@ -31,7 +31,7 @@ class Product
     }
 
     /**
-     * @CommandHandler(inputChannelName="product.register")
+     * @CommandHandler("product.register")
      */
     public static function register(RegisterProductCommand $command) : self
     {
@@ -39,7 +39,7 @@ class Product
     }
 
     /**
-     * @QueryHandler(inputChannelName="product.getCost")
+     * @QueryHandler("product.getCost")
      */
     public function getCost(GetProductPriceQuery $query) : Cost
     {
