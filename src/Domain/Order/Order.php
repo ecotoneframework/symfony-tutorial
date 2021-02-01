@@ -53,7 +53,7 @@ class Order
     }
 
     /**
-     * @QueryHandler(inputChannelName="order.getTotalPrice")
+     * @QueryHandler("order.getTotalPrice")
      */
     public function getTotalPrice() : int
     {
