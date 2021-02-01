@@ -4,8 +4,8 @@
     "require": {
         "ext-ctype": "*",
         "ext-iconv": "*",
-        "ecotone/jms-converter": "^0.101",
-        "ecotone/symfony-bundle": "^0.10",
+        "ecotone/jms-converter": "^0.12",
+        "ecotone/symfony-bundle": "^0.12",
         "phpunit/phpunit": "^8.5",
         "symfony/console": "^5",
         "symfony/dotenv": "^5.0",
