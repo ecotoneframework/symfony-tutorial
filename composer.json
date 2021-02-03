@@ -6,6 +6,7 @@
         "ext-iconv": "*",
         "ecotone/jms-converter": "^0.12",
         "ecotone/symfony-bundle": "^0.12",
+        "doctrine/dbal": "^2.10",
         "phpunit/phpunit": "^8.5",
         "symfony/console": "^5",
         "symfony/dotenv": "^5.0",
