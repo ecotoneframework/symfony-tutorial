@@ -20,7 +20,7 @@ services:
         resource: '../bootstrap/*'
         exclude: '../bootstrap/{Kernel.php}'
 
-    Enqueue\AmqpLib\AmqpConnectionFactory:
-        class: Enqueue\AmqpLib\AmqpConnectionFactory
+    Enqueue\AmqpExt\AmqpConnectionFactory:
+        class: Enqueue\AmqpExt\AmqpConnectionFactory
         arguments:
             - "amqp+lib://guest:guest@rabbitmq:5672//"

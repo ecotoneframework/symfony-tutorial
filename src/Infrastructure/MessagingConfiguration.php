@@ -3,17 +3,11 @@
 namespace App\Infrastructure;
 
 use Ecotone\Amqp\AmqpBackedMessageChannelBuilder;
-use Ecotone\Messaging\Annotation\ApplicationContext;
-use Ecotone\Messaging\Annotation\Extension;
+use Ecotone\Messaging\Attribute\ServiceContext;
 
-/**
- * @ApplicationContext()
- */
 class MessagingConfiguration
 {
-    /**
-     * @Extension()
-     */
+    #[ServiceContext]
     public function orderChannel()
     {
         return [
