@@ -2,7 +2,5 @@
 
 namespace App\Infrastructure\RequireAdministrator;
 
-/**
- * @Annotation
- */
+#[\Attribute]
 class RequireAdministrator {}
