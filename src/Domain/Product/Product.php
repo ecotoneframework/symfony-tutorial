@@ -2,22 +2,18 @@
 
 namespace App\Domain\Product;
 
-use Ecotone\Modelling\Annotation\Aggregate;
-use Ecotone\Modelling\Annotation\AggregateIdentifier;
-use Ecotone\Modelling\Annotation\CommandHandler;
-use Ecotone\Modelling\Annotation\QueryHandler;
+use Ecotone\Modelling\Attribute\Aggregate;
+use Ecotone\Modelling\Attribute\AggregateIdentifier;
+use Ecotone\Modelling\Attribute\CommandHandler;
+use Ecotone\Modelling\Attribute\QueryHandler;
 use Ecotone\Modelling\WithAggregateEvents;
 
-/**
- * @Aggregate()
- */
+#[Aggregate]
 class Product
 {
     use WithAggregateEvents;
 
-    /**
-     * @AggregateIdentifier()
-     */
+    #[AggregateIdentifier]
     private int $productId;
 
     private Cost $cost;
@@ -30,12 +26,10 @@ class Product
         $this->cost = $cost;
         $this->userId = $userId;
 
-        $this->record(new ProductWasRegisteredEvent($productId));
+        $this->recordThat(new ProductWasRegisteredEvent($productId));
     }
 
-    /**
-     * @CommandHandler("product.register")
-     */
+    #[CommandHandler("product.register")]
     public static function register(RegisterProductCommand $command, array $metadata, UserService $userService) : self
     {
         $userId = $metadata["userId"];
@@ -46,9 +40,7 @@ class Product
         return new self($command->getProductId(), $command->getCost(), $userId);
     }
 
-    /**
-     * @CommandHandler("product.changePrice")
-     */
+    #[CommandHandler("product.changePrice")]
     public function changePrice(ChangePriceCommand $command, array $metadata) : void
     {
         if ($metadata["userId"] !== $this->userId) {
@@ -58,9 +50,7 @@ class Product
         $this->cost = $command->getCost();
     }
 
-    /**
-     * @QueryHandler("product.getCost")
-     */
+    #[QueryHandler("product.getCost")]
     public function getCost(GetProductPriceQuery $query) : Cost
     {
         return $this->cost;
