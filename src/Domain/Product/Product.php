@@ -2,6 +2,7 @@
 
 namespace App\Domain\Product;
 
+use Ecotone\Messaging\Attribute\Parameter\Reference;
 use Ecotone\Modelling\Attribute\Aggregate;
 use Ecotone\Modelling\Attribute\AggregateIdentifier;
 use Ecotone\Modelling\Attribute\CommandHandler;
@@ -30,7 +31,7 @@ class Product
     }
 
     #[CommandHandler("product.register")]
-    public static function register(RegisterProductCommand $command, array $metadata, UserService $userService) : self
+    public static function register(RegisterProductCommand $command, array $metadata, #[Reference] UserService $userService) : self
     {
         $userId = $metadata["userId"];
         if (!$userService->isAdmin($userId)) {
